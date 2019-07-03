@@ -1,0 +1,48 @@
+ \begin{table}[!hbt]
+	\centering
+	\begin{tikzpicture}
+		\fill[lightgray] (-8.25,-0.3) rectangle (8.25,-1.1);
+		\fill[lightgray] (-8.25,-4.7) rectangle (8.25,-5.9);
+		\draw (-8.25,-0.3) rectangle (8.25,-5.9);
+		\draw (-8.25,-1.1) -- (8.25,-1.1);
+		\draw (-8.25,-2.3) -- (8.25,-2.3);
+		\draw (-8.25,-3.5) -- (8.25,-3.5);
+		\draw (-8.25,-4.7) -- (8.25,-4.7);
+
+		\draw (-3.5,-0.3) -- (-3.5,-5.9);
+		\draw (0.75,-0.3) -- (0.75,-5.9);
+		\draw (2.5,-0.3) -- (2.5,-5.9);
+		\draw (6.5,-0.3) -- (6.5,-5.9);
+
+		\node[text width=6cm] at (-4.93,-0.7) {\fontsize{8}{0}\selectfont \textbf{$var_table_name$}};
+		\node[text width=6cm] at (-4.93,-1.7) {\fontsize{8}{0}\selectfont Acertou};
+		\node[text width=6cm] at (-4.93,-2.9) {\fontsize{8}{0}\selectfont Errou};
+		\node[text width=6cm] at (-4.93,-4.1) {\fontsize{8}{0}\selectfont Não Resolveu};
+		\node[text width=6cm] at (-4.93,-5.3) {\fontsize{8}{0}\selectfont Total};
+
+		\node at (-1.4,-0.7) {\fontsize{8}{0}\selectfont Ideia};
+		\node at (1.55,-0.7) {\fontsize{8}{0}\selectfont \%};
+		\node at (4.5,-0.7) {\fontsize{8}{0}\selectfont Resultado};
+		\node at (7.35,-0.7) {\fontsize{8}{0}\selectfont \%};
+
+		\node at (-1.4,-1.7) {\fontsize{8}{0}\selectfont $var_ideia_acertou_value$ Alunos};
+		\node at (1.55,-1.7) {\fontsize{8}{0}\selectfont $var_ideia_acertou_percentage$ \%};
+		\node at (4.5,-1.7) {\fontsize{8}{0}\selectfont $var_resultado_acertou_value$ Alunos};
+		\node at (7.35,-1.7) {\fontsize{8}{0}\selectfont $var_resultado_acertou_percentage$ \%};
+
+		\node at (-1.4,-2.9) {\fontsize{8}{0}\selectfont $var_ideia_errou_value$ Alunos};
+		\node at (1.55,-2.9) {\fontsize{8}{0}\selectfont$var_ideia_errou_percentage$ \%};
+		\node at (4.5,-2.9) {\fontsize{8}{0}\selectfont $var_resultado_errou_value$ Alunos};
+		\node at (7.35,-2.9) {\fontsize{8}{0}\selectfont $var_resultado_errou_percentage$ \%};
+
+		\node at (-1.4,-4.1) {\fontsize{8}{0}\selectfont $var_ideia_naoresolveu_value$ Alunos};
+		\node at (1.55,-4.1) {\fontsize{8}{0}\selectfont $var_ideia_naoresolveu_percentage$ \%};
+		\node at (4.5,-4.1) {\fontsize{8}{0}\selectfont $var_resultado_naoresolveu_value$ Alunos};
+		\node at (7.35,-4.1) {\fontsize{8}{0}\selectfont $var_resultado_naoresolveu_percentage$ \%};
+
+		\node at (-1.4,-5.3) {\fontsize{8}{0}\selectfont $var_ideia_total_value$ Alunos};
+		\node at (1.55,-5.3) {\fontsize{8}{0}\selectfont $var_ideia_total_percentage$ \%};
+		\node at (4.5,-5.3) {\fontsize{8}{0}\selectfont $var_resultado_total_value$ Alunos};
+		\node at (7.35,-5.3) {\fontsize{8}{0}\selectfont $var_resultado_total_percentage$ \%};
+	\end{tikzpicture}
+\end{table}

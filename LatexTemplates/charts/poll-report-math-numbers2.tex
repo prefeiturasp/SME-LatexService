@@ -1,0 +1,27 @@
+\pgfplotstableread[row sep=\\,col sep=&]{
+    type & value \\
+    Escreve conv. & $var_true_value$ \\
+    Não escreve conv. & $var_false_value$ \\
+}\$var_chart_data$
+
+\begin{figure}[!hbt]
+    \centering
+    \begin{tikzpicture}
+        \filldraw[draw=lightgray,fill=lightgray] (0,-1.3) rectangle (16.5,-0.5);
+        \node at (8.5,-0.9) {\fontsize{8}{0}\selectfont \textbf{$var_chart_name$}};
+    \end{tikzpicture}
+
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            symbolic x coords={Escreve conv., Não escreve conv.}, 
+            xtick=data, 
+            nodes near coords,
+            bar width=60,
+            enlarge x limits=0.6,
+            ymin=0,
+            ymajorgrids = true]
+            \addplot[fill=gray1] table[x=type,y=value]{\$var_chart_data$};
+        \end{axis}
+    \end{tikzpicture}
+\end{figure}         

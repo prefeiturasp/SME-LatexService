@@ -1,0 +1,112 @@
+\documentclass{report}
+\input{/srv/www/latexService/latexTemplates/packages/poll-report}
+\input{/srv/www/latexService/latexTemplates/colors/poll-report}
+\geometry{hmargin=2.5cm,bmargin=2.5cm,tmargin=7cm}
+
+\newcommand\Header{%
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[lightgray]
+    (current page.north west) -- (current page.north east) -- 
+    ([yshift=0.5cm]current page.north east|-current page text area.north east) --
+    ([yshift=0.5cm]current page.north west|-current page text area.north west);
+  \node[draw=none,fill=none] at (2,0.6){\includegraphics[width=4cm]{/srv/www/latexService/latexTemplates/imgs/logo-sme-preto.pdf}};
+  \node at (12.65,0.25) {\fontsize{15}{0}\selectfont RELATÓRIO DE SONDAGEM - \thepage/\pageref{LastPage}};
+  \filldraw[draw=black,fill=white,rounded corners=2] (0,-1.3) rectangle (16.5,-0.5);
+  \node[text width=10cm] at (5.3,-0.9) {\fontsize{8}{0}\selectfont Professor: Daniel Matsumoto};
+  \node[text width=3cm] at (15.5,-0.9) {\fontsize{8}{0}\selectfont Data: 01/07/2019};
+  \filldraw[draw=black,fill=white,rounded corners=2] (0,-3.3) rectangle (16.5,-1.6);
+  \draw (5,-1.6) -- (5,-3.3);
+  \draw (8.6,-2.45) -- (8.6,-3.3);
+  \draw (11,-1.6) -- (11,-3.3);
+  \draw (13.7,-1.6) -- (13.7,-2.45);
+  \draw (0,-2.45) -- (16.5,-2.45);
+  \node[text width=5cm] at (2.8,-2.05) {\fontsize{8}{0}\selectfont DRE: Tremembé/Jaçanã};
+  \node[text width=5cm] at (2.8,-2.85) {\fontsize{8}{0}\selectfont Língua Portuguesa};
+  \node[text width=6cm] at (8.3,-2.05) {\fontsize{8}{0}\selectfont Escola: Taboão da Serra};
+  \node[text width=2.7cm] at (6.65,-2.85) {\fontsize{8}{0}\selectfont Leitura};
+  \node[text width=2.7cm] at (10.2,-2.85) {\fontsize{8}{0}\selectfont 1° Bimestre};
+  \node[text width=2.7cm] at (12.65,-2.05) {\fontsize{8}{0}\selectfont Ano: 2°};
+  \node[text width=2.7cm] at (15.35,-2.05) {\fontsize{8}{0}\selectfont Turmas: Todas};
+  \node[text width=6cm] at (14.3,-2.85) {\fontsize{8}{0}\selectfont Tipo: Consolidado};
+\end{tikzpicture}%
+}
+
+\newcommand\Footer{%
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[lightgray]
+    (current page.south west) -- (current page.south east) --
+    ([yshift=-0.5cm]current page.south east|-current page text area.south east) --
+    ([yshift=-0.5cm]current page.south west|-current page text area.south west);
+    \node[text width=14.5cm] at (7.2,-24.1) {\fontsize{8}{0}\selectfont Relatório de Sondagem - 2° Ano / Turmas: Todas / Língua Portuguesa / Leitura / 1° Bimestre};
+    \node[text width=2cm] at (17.15,-24.1) {\fontsize{8}{0}\selectfont \thepage/\pageref{LastPage}};
+\end{tikzpicture}%
+}
+
+\pagestyle{empty}
+\AtBeginShipout{\AtBeginShipoutAddToBox{\Header\Footer}}
+\AtBeginShipoutFirst{\Header\Footer}
+\begin{document}
+\begin{table}[!hbt]
+	\centering
+	\begin{tikzpicture}
+		\fill[lightgray] (-8.25,0.5) rectangle (8.25,-0.3);
+		\fill[lightgray] (-8.25,-5) rectangle (8.25,-6.2);
+		\draw (-8.25,0.5) rectangle (8.25,-6.2);
+		\draw (-8.25,-0.3) -- (8.25,-0.3);
+		\draw (-8.25,-1.4) -- (8.25,-1.4);
+		\draw (-8.25,-2.6) -- (8.25,-2.6);
+		\draw (-8.25,-3.8) -- (8.25,-3.8);
+		\draw (-8.25,-5) -- (8.25,-5);
+
+		\draw (-3.5,0.5) -- (-3.5,-6.2);
+		\draw (6.5,0.5) -- (6.5,-6.2);
+
+		\node[text width=6cm] at (-4.93,0.1) {\fontsize{8}{0}\selectfont Proficiência};
+		\node[text width=6cm] at (-4.93,-0.85) {\fontsize{8}{0}\selectfont Nível 1};
+		\node[text width=6cm] at (-4.93,-2) {\fontsize{8}{0}\selectfont Nível 2};
+		\node[text width=6cm] at (-4.93,-3.2) {\fontsize{8}{0}\selectfont Nível 3};
+		\node[text width=6cm] at (-4.93,-4.4) {\fontsize{8}{0}\selectfont Nível 4};
+		\node[text width=6cm] at (-4.93,-5.6) {\fontsize{8}{0}\selectfont TOTAL};
+
+		\node at (1.5,0.1) {\fontsize{8}{0}\selectfont Alunos};
+		\node at (1.5,-0.85) {\fontsize{8}{0}\selectfont 20 Alunos};
+		\node at (1.5,-2) {\fontsize{8}{0}\selectfont 30 Alunos};
+		\node at (1.5,-3.2) {\fontsize{8}{0}\selectfont 45 Alunos};
+		\node at (1.5,-4.4) {\fontsize{8}{0}\selectfont 60 Alunos};
+		\node at (1.5,-5.6) {\fontsize{8}{0}\selectfont 155 Alunos};
+
+		\node at (7.4,0.1) {\fontsize{8}{0}\selectfont \%};
+		\node at (7.4,-0.85) {\fontsize{8}{0}\selectfont 12.9 \%};
+		\node at (7.4,-2) {\fontsize{8}{0}\selectfont 19.35 \%};
+		\node at (7.4,-3.2) {\fontsize{8}{0}\selectfont 29.03 \%};
+		\node at (7.4,-4.4) {\fontsize{8}{0}\selectfont 38.71 \%};
+		\node at (7.4,-5.6) {\fontsize{8}{0}\selectfont 100 \%};
+	\end{tikzpicture}
+\end{table}
+\pgfplotstableread[row sep=\\,col sep=&]{
+    type & value \\
+    Nível 1 & 20 \\
+    Nível 2 & 30 \\
+    Nível 3 & 45 \\
+    Nível 4 & 60 \\
+}\pollReportPortugueseReadingData
+
+\begin{figure}[!hbt]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=\textwidth,
+            height=\axisdefaultheight,
+            ybar,
+            symbolic x coords={Nível 1, Nível 2, Nível 3, Nível 4}, 
+            xtick=data, 
+            nodes near coords,
+            bar width=70,
+            enlarge x limits=0.25 ,
+            ymin=0,
+            ymajorgrids = true]
+            \addplot[fill=gray1] table[x=type,y=value]{\pollReportPortugueseReadingData};
+        \end{axis}
+    \end{tikzpicture}
+\end{figure}
+\end{document}

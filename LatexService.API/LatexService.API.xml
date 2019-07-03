@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LatexService.API</name>
+    </assembly>
+    <members>
+        <member name="M:LatexService.API.Controllers.RecipesController.CreateRecipe(LatexService.Business.Models.Abstracts.Recipe)">
+            <summary>
+            Método para gerar a receita (recipe) para todos os tipos existentes (polimorfismo)
+            </summary>
+            <param name="recipe">Receita necessária para gerar o tipo correto de relatório</param>
+            <returns>Não retorna valor, contudo gera o arquivo PDF no servidor</returns>
+        </member>
+        <member name="M:LatexService.API.Controllers.RecipesController.PollReportPortugueseWriting(LatexService.Business.Models.Recipes.PollReportPortugueseWriting)">
+            <summary>
+            Método para gerar o pdf à partir de uma recipe de Relatório de Sondagem - Portugues Consolidado (Escrita)
+            </summary>
+            <param name="recipe">Recipe da Sondagem de Português (valores)</param>
+            <returns>Retorna o PDF gerado à partir da recipe</returns>
+        </member>
+        <member name="M:LatexService.API.Controllers.RecipesController.PollReportPortugueseReading(LatexService.Business.Models.Recipes.PollReportPortugueseReading)">
+            <summary>
+            Método para gerar o pdf à partir de uma recipe de Relatório de Sondagem - Portugues Consolidado (Leitura)
+            </summary>
+            <param name="recipe">Recipe da Sondagem de Português (valores)</param>
+            <returns>Retorna o PDF gerado à partir da recipe</returns>
+        </member>
+        <member name="M:LatexService.API.Controllers.RecipesController.PollReportPortugueseWritingClass(LatexService.Business.Models.Recipes.PollReportPortugueseWritingClass)">
+            <summary>
+            Método para gerar o pdf à partir de uma recipe de Relatório de Sondagem - Português da Classe (Escrita)
+            </summary>
+            <param name="recipe">Recipe da Sondagem de Português da Classe (valores)</param>
+            <returns>Retorna o PDF gerado à partir da recipe</returns>
+        </member>
+        <member name="M:LatexService.API.Controllers.RecipesController.PollReportPortugueseReadingClass(LatexService.Business.Models.Recipes.PollReportPortugueseReadingClass)">
+            <summary>
+            Método para gerar o pdf à partir de uma recipe de Relatório de Sondagem - Português da Classe (Leitura)
+            </summary>
+            <param name="recipe">Recipe da Sondagem de Português da Classe (valores)</param>
+            <returns>Retorna o PDF gerado à partir da recipe</returns>
+        </member>
+        <member name="M:LatexService.API.Controllers.RecipesController.PollReportMathSum(LatexService.Business.Models.Recipes.PollReportMathSum)">
+            <summary>
+            Método para gerar o pdf à partir de uma recipe de Relatório de Sondagem - Matemática Consolidado (Aditivo)
+            </summary>
+            <param name="recipe">Recipe da Sondagem de Matemática (valores)</param>
+            <returns>Retorna o PDF gerado à partir da recipe</returns>
+        </member>
+        <member name="M:LatexService.API.Controllers.RecipesController.PollReportMathMultiplication(LatexService.Business.Models.Recipes.PollReportMathMultiplication)">
+            <summary>
+            Método para gerar o pdf à partir de uma recipe de Relatório de Sondagem - Matemática Consolidado (Multiplicativo)
+            </summary>
+            <param name="recipe">Recipe da Sondagem de Matemática (valores)</param>
+            <returns>Retorna o PDF gerado à partir da recipe</returns>
+        </member>
+        <member name="M:LatexService.API.Controllers.RecipesController.PollReportMathNumbers(LatexService.Business.Models.Recipes.PollReportMathNumbers)">
+            <summary>
+            Método para gerar o pdf à partir de uma recipe de Relatório de Sondagem - Matemática Consolidado (Números)
+            </summary>
+            <param name="recipe">Recipe da Sondagem de Matemática (valores)</param>
+            <returns>Retorna o PDF gerado à partir da recipe</returns>
+        </member>
+        <member name="M:LatexService.API.Controllers.RecipesController.PollReportMathSumClass(LatexService.Business.Models.Recipes.PollReportMathSumClass)">
+            <summary>
+            Método para gerar o pdf à partir de uma recipe de Relatório de Sondagem - Matemática da Classe (Aditivo)
+            </summary>
+            <param name="recipe">Recipe da Sondagem de Matemática da Classe (valores)</param>
+            <returns>Retorna o PDF gerado à partir da recipe</returns>
+        </member>
+        <member name="M:LatexService.API.Controllers.RecipesController.PollReportMathMultiplicationClass(LatexService.Business.Models.Recipes.PollReportMathMultiplicationClass)">
+            <summary>
+            Método para gerar o pdf à partir de uma recipe de Relatório de Sondagem - Matemática da Classe (Multiplicativo)
+            </summary>
+            <param name="recipe">Recipe da Sondagem de Matemática da Classe (valores)</param>
+            <returns>Retorna o PDF gerado à partir da recipe</returns>
+        </member>
+        <member name="M:LatexService.API.Controllers.RecipesController.PollReportMathNumbersClass(LatexService.Business.Models.Recipes.PollReportMathNumbersClass)">
+            <summary>
+            Método para gerar o pdf à partir de uma recipe de Relatório de Sondagem - Matemática da Classe (Números)
+            </summary>
+            <param name="recipe">Recipe da Sondagem de Matemática da Classe (valores)</param>
+            <returns>Retorna o PDF gerado à partir da recipe</returns>
+        </member>
+    </members>
+</doc>

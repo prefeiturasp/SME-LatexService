@@ -1,0 +1,27 @@
+\pgfplotstableread[row sep=\\,col sep=&]{
+    type & value \\
+    PS & $var_ps_value$ \\
+    SSV & $var_ssv_value$ \\
+    SCV & $var_scv_value$ \\
+    SA & $var_sa_value$ \\
+    A & $var_a_value$ \\
+}\pollReportPortugueseWritingData
+
+\begin{figure}[!hbt]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=\textwidth,
+            height=\axisdefaultheight,
+            ybar,
+            symbolic x coords={PS, SSV, SCV, SA, A}, 
+            xtick=data, 
+            nodes near coords,
+            bar width=50,
+            enlarge x limits=0.25 ,
+            ymin=0,
+            ymajorgrids = true]
+            \addplot[fill=gray1] table[x=type,y=value]{\pollReportPortugueseWritingData};
+        \end{axis}
+    \end{tikzpicture}
+\end{figure}

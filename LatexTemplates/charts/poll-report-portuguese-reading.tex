@@ -1,0 +1,26 @@
+\pgfplotstableread[row sep=\\,col sep=&]{
+    type & value \\
+    Nível 1 & $var_n1_value$ \\
+    Nível 2 & $var_n2_value$ \\
+    Nível 3 & $var_n3_value$ \\
+    Nível 4 & $var_n4_value$ \\
+}\pollReportPortugueseReadingData
+
+\begin{figure}[!hbt]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=\textwidth,
+            height=\axisdefaultheight,
+            ybar,
+            symbolic x coords={Nível 1, Nível 2, Nível 3, Nível 4}, 
+            xtick=data, 
+            nodes near coords,
+            bar width=70,
+            enlarge x limits=0.25 ,
+            ymin=0,
+            ymajorgrids = true]
+            \addplot[fill=gray1] table[x=type,y=value]{\pollReportPortugueseReadingData};
+        \end{axis}
+    \end{tikzpicture}
+\end{figure}
